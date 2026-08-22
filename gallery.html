@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija - Kod Marka</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">Kod Marka</a></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="menu.html">Meni</a></li>
+                <li><a href="gallery.html" class="active">Galerija</a></li>
+                <li><a href="about.html">O Nama</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">☰</button>
+        </div>
+    </nav>
+
+    <!-- ========== GALLERY HERO ========== -->
+    <header class="page-hero gallery-hero">
+        <div class="hero-content">
+            <h1>Galerija</h1>
+            <p>Pogledajte atmosferu našeg restorana i jela</p>
+        </div>
+    </header>
+
+    <!-- ========== GALLERY SECTION ========== -->
+    <section class="gallery-section">
+        <div class="container">
+
+            <!-- Gallery Filters -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-category="all">Sve</button>
+                <button class="filter-btn" data-category="interior">Enterijer</button>
+                <button class="filter-btn" data-category="food">Hrana</button>
+                <button class="filter-btn" data-category="events">Događaji</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Images will be inserted by JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <p>Kod Marka | Vračar, Beograd | <a href="tel:+3816xxxxxxx">06x xxxxxxx</a></p>
+            <p><a href="https://wa.me/3816xxxxxxx">WhatsApp</a> | <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+            <p>&copy; 2026. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

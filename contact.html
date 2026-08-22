@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Kod Marka</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">Kod Marka</a></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="menu.html">Meni</a></li>
+                <li><a href="gallery.html">Galerija</a></li>
+                <li><a href="about.html">O Nama</a></li>
+                <li><a href="contact.html" class="active">Kontakt</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">☰</button>
+        </div>
+    </nav>
+
+    <!-- ========== CONTACT HERO ========== -->
+    <header class="page-hero contact-hero">
+        <div class="hero-content">
+            <h1>Kontakt</h1>
+            <p>Rezervišite sto ili nas kontaktirajte</p>
+        </div>
+    </header>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Kontaktirajte Nas</h2>
+                    <p><strong>Telefon:</strong> <a href="tel:+3816xxxxxxx">06x xxxxxxx</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/3816xxxxxxx">06x xxxxxxx</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@kodmarka.rs">info@kodmarka.rs</a></p>
+                    <p><strong>Adresa:</strong> Njegoševa 123, Vračar, Beograd</p>
+
+                    <h3>Radno Vreme</h3>
+                    <ul>
+                        <li><span>Ponedeljak - Petak:</span> 09:00 - 22:00</li>
+                        <li><span>Subota:</span> 10:00 - 23:00</li>
+                        <li><span>Nedelja:</span> 10:00 - 21:00</li>
+                    </ul>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Pošaljite Poruku</h2>
+                    <form action="https://formspree.io/f/your-form-id" method="POST">
+                        <input type="text" name="name" placeholder="Vaše ime" required>
+                        <input type="email" name="email" placeholder="Vaš email" required>
+                        <input type="tel" name="phone" placeholder="Vaš broj telefona (opcionalno)">
+                        <textarea name="message" rows="5" placeholder="Vaša poruka..." required></textarea>
+                        <button type="submit" class="btn">Pošalji</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.1234567890123!2d20.468!3d44.804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDQ4JzE0LjQiTiAyMMKwMjgnMDQuOCJF!5e0!3m2!1sen!2srs!4v1234567890" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <p>Kod Marka | Vračar, Beograd | <a href="tel:+3816xxxxxxx">06x xxxxxxx</a></p>
+            <p><a href="https://wa.me/3816xxxxxxx">WhatsApp</a> | <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+            <p>&copy; 2026. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

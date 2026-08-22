@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meni - Kod Marka</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION (SAME AS HOME) ========== -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">Kod Marka</a></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="menu.html" class="active">Meni</a></li>
+                <li><a href="gallery.html">Galerija</a></li>
+                <li><a href="about.html">O Nama</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">☰</button>
+        </div>
+    </nav>
+
+    <!-- ========== MENU HERO ========== -->
+    <header class="page-hero menu-hero">
+        <div class="hero-content">
+            <h1>Naš Meni</h1>
+            <p>Jela pripremljena sa ljubavlju, po starim receptima</p>
+        </div>
+    </header>
+
+    <!-- ========== MENU SECTION ========== -->
+    <section class="menu-section">
+        <div class="container">
+
+            <!-- Category Filter Buttons -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-category="all">Sve</button>
+                <button class="filter-btn" data-category="appetizers">Predjela</button>
+                <button class="filter-btn" data-category="main">Glavna Jela</button>
+                <button class="filter-btn" data-category="desserts">Deserti</button>
+                <button class="filter-btn" data-category="drinks">Pića</button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Items will be inserted by JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== FOOTER (SAME AS HOME) ========== -->
+    <footer>
+        <div class="container">
+            <p>Kod Marka | Vračar, Beograd | <a href="tel:+3816xxxxxxx">06x xxxxxxx</a></p>
+            <p><a href="https://wa.me/3816xxxxxxx">WhatsApp</a> | <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+            <p>&copy; 2026. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
