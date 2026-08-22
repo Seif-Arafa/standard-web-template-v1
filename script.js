@@ -8,28 +8,109 @@ if (hamburger && navLinks) {
     });
 }
 
-// ===== MENU DATA =====
+// ===== MENU DATA (WITH IMAGES) =====
 const menuData = [
-    // Appetizers
-    { name: "Ajvar Dip", description: "Roasted red pepper and eggplant spread, served with warm bread.", price: 450, category: "appetizers" },
-    { name: "Pršuta i Sir", description: "Selection of cured ham and aged Serbian cheeses.", price: 650, category: "appetizers" },
-    { name: "Kajmak", description: "Traditional creamy dairy spread, served with warm proja (cornbread).", price: 380, category: "appetizers" },
-    // Main Courses
-    { name: "Sarma", description: "Traditional Serbian cabbage rolls with minced meat and rice, served with sour cream.", price: 850, category: "main" },
-    { name: "Ćevapi", description: "Grilled minced meat sausages, served with onions, kajmak, and warm somun bread.", price: 750, category: "main" },
-    { name: "Karadjordjeva Šnicla", description: "Breaded veal steak rolled with kajmak and ham, fried to golden perfection.", price: 950, category: "main" },
-    { name: "Prebranac", description: "Baked beans with onions and smoked paprika, a Serbian classic.", price: 550, category: "main" },
-    // Desserts
-    { name: "Palačinke", description: "Thin pancakes filled with jam, Nutella, or walnuts, served with whipped cream.", price: 380, category: "desserts" },
-    { name: "Tufahije", description: "Poached apples stuffed with walnuts and topped with whipped cream.", price: 420, category: "desserts" },
-    { name: "Krempita", description: "Traditional custard slice dessert with crispy phyllo layers.", price: 350, category: "desserts" },
-    // Drinks
-    { name: "Rakija (Šljivovica)", description: "Traditional Serbian plum brandy, aged in oak barrels.", price: 250, category: "drinks" },
-    { name: "Kafa", description: "Turkish-style coffee, served with a side of Turkish delight.", price: 180, category: "drinks" },
-    { name: "Šumadijski Čaj", description: "Hot tea with honey, lemon, and a hint of rakija.", price: 220, category: "drinks" }
+    // ===== APPETIZERS =====
+    { 
+        name: "Ajvar Dip", 
+        description: "Roasted red pepper and eggplant spread, served with warm, freshly baked bread.", 
+        price: 450, 
+        category: "appetizers",
+        image: "images/ajvar-dip.jpg" 
+    },
+    { 
+        name: "Pršuta i Sir", 
+        description: "Selection of finest cured ham and aged Serbian cheeses, served with seasonal fruit.", 
+        price: 650, 
+        category: "appetizers",
+        image: "images/prsuta-i-sir.jpg" 
+    },
+    { 
+        name: "Kajmak", 
+        description: "Traditional creamy dairy spread, served with warm proja (cornbread) and sea salt.", 
+        price: 380, 
+        category: "appetizers",
+        image: "images/kajmak.jpg" 
+    },
+
+    // ===== MAIN COURSES =====
+    { 
+        name: "Sarma", 
+        description: "Traditional Serbian cabbage rolls with minced meat and rice, slow-cooked and served with sour cream.", 
+        price: 850, 
+        category: "main",
+        image: "images/sarme.png" 
+    },
+    { 
+        name: "Ćevapi", 
+        description: "Grilled minced meat sausages, served with onions, kajmak, and warm somun bread.", 
+        price: 750, 
+        category: "main",
+        image: "images/cevapi.jpg" 
+    },
+    { 
+        name: "Karadjordjeva Šnicla", 
+        description: "Breaded veal steak rolled with kajmak and ham, fried to golden perfection.", 
+        price: 950, 
+        category: "main",
+        image: "images/k-snicla.jpg" 
+    },
+    { 
+        name: "Prebranac", 
+        description: "Baked beans with onions and smoked paprika, a Serbian classic from the countryside.", 
+        price: 550, 
+        category: "main",
+        image: "images/prebranac.jpg" 
+    },
+
+    // ===== DESSERTS =====
+    { 
+        name: "Palačinke", 
+        description: "Thin pancakes filled with jam, Nutella, or walnuts, served with whipped cream and fresh berries.", 
+        price: 380, 
+        category: "desserts",
+        image: "images/palacinke.jpg" 
+    },
+    { 
+        name: "Tufahije", 
+        description: "Poached apples stuffed with walnuts and topped with whipped cream—a Bosnian-Serbian classic.", 
+        price: 420, 
+        category: "desserts",
+        image: "images/tufahija.jpg" 
+    },
+    { 
+        name: "Krempita", 
+        description: "Traditional custard slice dessert with crispy phyllo layers and a dusting of powdered sugar.", 
+        price: 350, 
+        category: "desserts",
+        image: "images/krempita.jpg" 
+    },
+
+    // ===== DRINKS =====
+    { 
+        name: "Rakija (Šljivovica)", 
+        description: "Traditional Serbian plum brandy, aged in oak barrels for 3 years. Served chilled.", 
+        price: 250, 
+        category: "drinks",
+        image: "images/rakija.png" 
+    },
+    { 
+        name: "Turska Kafa", 
+        description: "Authentic Turkish-style coffee, brewed in a džezva and served with a side of Turkish delight.", 
+        price: 180, 
+        category: "drinks",
+        image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400" 
+    },
+    { 
+        name: "Šumadijski Čaj", 
+        description: "Warm tea with honey, lemon, and a hint of rakija—perfect for cold evenings.", 
+        price: 220, 
+        category: "drinks",
+        image: "images/sumadijski-caj.jpg" 
+    }
 ];
 
-// ===== DISPLAY MENU =====
+// ===== DISPLAY MENU (WITH IMAGES) =====
 function displayMenu(category = 'all') {
     const grid = document.getElementById('menuGrid');
     if (!grid) return;
@@ -38,12 +119,22 @@ function displayMenu(category = 'all') {
         ? menuData 
         : menuData.filter(item => item.category === category);
 
+    if (filtered.length === 0) {
+        grid.innerHTML = `<p class="no-items">Nema jela u ovoj kategoriji.</p>`;
+        return;
+    }
+
     grid.innerHTML = filtered.map(item => `
         <div class="menu-item">
-            <h3>${item.name}</h3>
-            <p class="description">${item.description}</p>
-            <span class="price">${item.price} RSD</span>
-            <span class="category-tag">${item.category}</span>
+            ${item.image ? `<img src="${item.image}" alt="${item.name}" class="menu-image" loading="lazy">` : ''}
+            <div class="menu-item-content">
+                <h3>${item.name}</h3>
+                <p class="description">${item.description}</p>
+                <div class="menu-item-footer">
+                    <span class="price">${item.price} RSD</span>
+                    <span class="category-tag">${item.category}</span>
+                </div>
+            </div>
         </div>
     `).join('');
 }
